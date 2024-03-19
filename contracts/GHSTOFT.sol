@@ -11,10 +11,4 @@ contract GHSTOFT is OFT {
         address _lzEndpoint,
         address _delegate
     ) OFT(_name, _symbol, _lzEndpoint, _delegate) Ownable(_delegate) {}
-
-    function mint(address _to, uint256 _amount) public {
-        //ghst locking logic
-        //This logic must be changed to reflect correct ghtsOFT minting logic on destination chain
-        _mint(_to, _amount);
-    }
 }
