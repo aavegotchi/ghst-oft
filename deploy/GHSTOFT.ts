@@ -36,7 +36,7 @@ const deploy: DeployFunction = async (hre) => {
     const { address } = await deploy(contractName, {
         from: deployer,
         args: [
-            'Aavegotchi(GHST) Token', // name
+            'Aavegotchi GHST Token', // name
             'GHST', // symbol
             endpointV2Deployment.address, // LayerZero's EndpointV2 address
             deployer, // owner

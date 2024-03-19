@@ -32,12 +32,12 @@ const deploy: DeployFunction = async (hre) => {
     //   }
     // }
     const endpointV2Deployment = await hre.deployments.get('EndpointV2')
-    const ghstAddress = '0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7'
+    const ghstPolygonAddress = '0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7'
 
     const { address } = await deploy(contractName, {
         from: deployer,
         args: [
-            ghstAddress, // ghst address on local chain
+            ghstPolygonAddress, // ghst address on local chain
             endpointV2Deployment.address, // LayerZero's EndpointV2 address
             deployer, // owner
         ],
