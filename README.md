@@ -121,7 +121,7 @@ npx hardhat lz:deploy --help
 
 - use the `GHSTOFT` script tag, this deploys the GHSTOFT to the local simulation of base mainnet
 
-- <a href="https://docs.layerzero.network/contracts/wiring" style="color: #a77dff">WIRING CONTRACTS</a> contracts need to be wired together to set them as peers after deployment, the `layerzero.config.ts` as been configured to wire the GHSTOFT on polygon to the GHSTOFTAdapter on base.
+- <a href="https://docs.layerzero.network/contracts/wiring" style="color: #a77dff">WIRING CONTRACTS</a> contracts need to be wired together to set them as peers after deployment, the `layerzero.config.ts` as been configured to wire the GHSTOFTAdapter on polygon to the GHSTOFT on base.
 
 ```bash
    npx hardhat lz:oapp:wire --oapp-config layerzero.config.ts
