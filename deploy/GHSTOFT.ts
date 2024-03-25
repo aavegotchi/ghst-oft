@@ -31,9 +31,6 @@ const deploy: DeployFunction = async (hre) => {
     //     eid: EndpointId.AVALANCHE_V2_TESTNET
     //   }
     // }
-
-    const L2CrossDomainMessenger = '0x4200000000000000000000000000000000000007'
-    const ghstAddressonETH = '0x1906fd9c4AC440561F7197Da0A4BD2E88DF5fA70'
     const endpointV2Deployment = await hre.deployments.get('EndpointV2')
 
     const { address } = await deploy(contractName, {
@@ -42,10 +39,7 @@ const deploy: DeployFunction = async (hre) => {
             'Aavegotchi GHST Token', // name
             'GHST', // symbol
             endpointV2Deployment.address, // LayerZero's EndpointV2 address
-            deployer, // owner,
-            //Base bridge init details
-            L2CrossDomainMessenger,
-            ghstAddressonETH,
+            deployer, // owner
         ],
         log: true,
         skipIfAlreadyDeployed: false,
